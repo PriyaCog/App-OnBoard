@@ -1,0 +1,12 @@
+.btn1{
+    background-color: rgb(85,35,105);
+    color:white;
+}
+
+.form-inline{
+    margin-bottom :10px;
+}
+
+.tb1{
+    overflow-x: auto;        
+}

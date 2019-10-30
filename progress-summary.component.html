@@ -1,0 +1,40 @@
+<div class="popup">
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">Progress Summary</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+
+<div class="popup">
+<div class="modal-body">
+  <table class="table">
+    <thead>
+      <tr class="row">
+        <th>Title</th>
+        <th>Description</th>
+        <th>Document type</th>
+        <th>Course type</th>
+        <th>Status</th>
+        <th>Uploaded completion screenshots</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let course of progressSummary" class="row">
+        <td>{{course.title}}</td>
+        <td>{{course.desciption}}</td>
+        <td>{{course.documentType}}</td>
+        <td>{{course.courseType}}</td>
+        <td *ngIf="course.isCourseCompleted">Completed</td>
+        <td *ngIf="!course.isCourseCompleted">In Progress</td>
+        <td *ngIf="course.isCourseCompleted"><a href="https://picsum.photos/id/485/2000/1500" target="_blank">View</a></td>
+        <td *ngIf="!course.isCourseCompleted"></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  </div>
+
+  
